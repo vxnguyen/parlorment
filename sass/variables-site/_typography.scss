@@ -1,4 +1,13 @@
-$font__main: "Maison Neue", sans-serif;
+@font-face {
+    font-family: "MaisonNeueBold";
+    src: url("/fonts/maison-neue-bold.ttf");
+}
+
+$font__main: "MaisonNeueMedium", sans-serif;
+$font__navigation: "MaisonNeueBold", sans-serif;
+$font__post-title: "MaisonNeueBold", sans-serif;
+$font__post-meta: "MaisonNeueBold", sans-serif;
+$font__site-branding: "MaisonNeueBold", sans-serif;
 
 
 

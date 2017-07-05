@@ -10,12 +10,13 @@ textarea {
 }
 
 .main-navigation {
+	font-family: $font__navigation;
 	@include font-size(1.125);
-	font-weight: 500;
 	color: $color__font-navigation;
 }
 
 .post-meta {
+	font-family: $font__post-meta;
 	@include font-size(0.9375);
 	font-weight: 500;
 	color: $color__font-post-meta;

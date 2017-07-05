@@ -4,16 +4,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-branding h1 {
+	font-family: $font__site-branding;
 	@include font-size(1.614375);
 	line-height: 1;
 	color: $color__font-navigation;
 }
 
 .post-title {
+	font-family: $font__post-title;
 	@include font-size(1.5625);
 	line-height: 1.2;
-
-	@media screen and (max-width: 1200px) {
-		@include font-size(1.4);
-	}
 }

@@ -36,6 +36,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Categories
 # Infinite scroll
 --------------------------------------------------------------*/
+@font-face {
+  font-family: "MaisonNeueBold";
+  src: url("/fonts/maison-neue-bold.ttf"); }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -220,18 +223,19 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: "Maison Neue", sans-serif;
+  font-family: "MaisonNeueMedium", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
 
 .main-navigation {
+  font-family: "MaisonNeueBold", sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
-  font-weight: 500;
   color: #FFFFFF; }
 
 .post-meta {
+  font-family: "MaisonNeueBold", sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
   font-weight: 500;
@@ -247,19 +251,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 .site-branding h1 {
+  font-family: "MaisonNeueBold", sans-serif;
   font-size: 25.83px;
   font-size: 1.61438rem;
   line-height: 1;
   color: #FFFFFF; }
 
 .post-title {
+  font-family: "MaisonNeueBold", sans-serif;
   font-size: 25px;
   font-size: 1.5625rem;
   line-height: 1.2; }
-  @media screen and (max-width: 1200px) {
-    .post-title {
-      font-size: 22.4px;
-      font-size: 1.4rem; } }
 
 p {
   margin: 0; }
