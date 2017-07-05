@@ -1,0 +1,729 @@
+/*!
+Theme Name: Parlorment
+Theme URI: http://underscores.me/
+Author: Vinh Nguyen
+Author URI: http://vinhnguyen.me
+Description: Custom theme for Parlorment blog
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: parlorment
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Parlorment is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Layout
+# Content
+	## Site Branding
+	## Posts
+	## Categories
+# Infinite scroll
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: "Maison Neue", sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+.main-navigation {
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #FFFFFF; }
+
+.post-meta {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #C1C1C1;
+  line-height: 1.3; }
+  @media screen and (max-width: 1200px) {
+    .post-meta {
+      font-size: 13.4px;
+      font-size: 0.8375rem; } }
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  margin: 0; }
+
+.site-branding h1 {
+  font-size: 25.83px;
+  font-size: 1.61438rem;
+  line-height: 1;
+  color: #FFFFFF; }
+
+.post-title {
+  font-size: 25px;
+  font-size: 1.5625rem;
+  line-height: 1.2; }
+  @media screen and (max-width: 1200px) {
+    .post-title {
+      font-size: 22.4px;
+      font-size: 1.4rem; } }
+
+p {
+  margin: 0; }
+
+dfn, cite, em, i {
+  font-style: italic; }
+
+blockquote {
+  margin: 0 1.5em; }
+
+address {
+  margin: 0 0 1.5em; }
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
+
+code, kbd, tt, var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark, ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
+big {
+  font-size: 125%; }
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit; }
+
+body {
+  background: #fff;
+  /* Fallback for when there is no custom background color defined. */ }
+
+blockquote, q {
+  quotes: "" ""; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: ""; }
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
+
+ul, ol {
+  margin: 0 0 1.5em 3em; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 1.5em 1.5em; }
+
+img {
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
+
+figure {
+  margin: 1em 0;
+  /* Extra wide images within figure tags don't overflow the content area. */ }
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%; }
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: royalblue; }
+  a:visited {
+    color: purple; }
+  a:hover, a:focus, a:active {
+    color: midnightblue; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+  margin-top: 1px; }
+  .main-navigation ul {
+    margin: 0 0 0 0;
+    padding: 0; }
+    .main-navigation ul li {
+      display: block;
+      height: 70px;
+      width: 100px;
+      position: relative;
+      padding: 0 10px;
+      box-shadow: 0px 0px 0px 0px transparent;
+      transition: box-shadow .3s;
+      cursor: pointer; }
+      .main-navigation ul li:hover {
+        box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+        transition: box-shadow .3s; }
+      .main-navigation ul li p {
+        position: absolute;
+        bottom: 0; }
+  .main-navigation .nav-cat-1 {
+    background: #ff4338;
+    z-index: 6; }
+  .main-navigation .nav-cat-2 {
+    background: #004e59;
+    z-index: 5; }
+  .main-navigation .nav-cat-3 {
+    background: #7a9c49;
+    z-index: 4; }
+  .main-navigation .nav-cat-4 {
+    background: #276092;
+    z-index: 3; }
+  .main-navigation .nav-cat-5 {
+    background: #b8b09c;
+    z-index: 2; }
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden; }
+  .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0; }
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+.site {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 100px; }
+
+.site-main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px; }
+  @media screen and (max-width: 1200px) {
+    .site-main {
+      width: 950px; } }
+  @media screen and (max-width: 1150px) {
+    .site-main {
+      width: 900px; } }
+  @media screen and (max-width: 1050px) {
+    .site-main {
+      width: 800px; } }
+  @media screen and (max-width: 950px) {
+    .site-main {
+      width: 700px; } }
+  .site-main .post {
+    margin-right: 100px;
+    margin-bottom: 100px;
+    transition: all .3s; }
+    @media screen and (max-width: 1200px) {
+      .site-main .post {
+        margin-bottom: 50px;
+        margin-right: 50px;
+        transition: all .3s; } }
+    @media screen and (max-width: 1150px) {
+      .site-main .post {
+        margin-right: 50px; } }
+    @media screen and (max-width: 1050px) {
+      .site-main .post {
+        margin-right: 0;
+        transition: all .3s; } }
+    @media screen and (max-width: 950px) {
+      .site-main .post {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 100px; } }
+
+.site-content {
+  max-width: 1050px;
+  padding-left: 100px;
+  float: left;
+  transition: all .3s; }
+  @media screen and (max-width: 1100px) {
+    .site-content {
+      padding-left: 50px;
+      transition: all .3s; } }
+
+.site-header {
+  float: right;
+  max-width: 100px; }
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Site Branding
+--------------------------------------------------------------*/
+.site-branding {
+  background-color: #000000;
+  height: 100px;
+  width: 100px;
+  padding: 0 5px;
+  position: relative; }
+  .site-branding h1 {
+    position: absolute;
+    bottom: 0; }
+
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+.post {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow .4s; }
+  .post:hover .flipper {
+    transform: rotateY(180deg); }
+  @media screen and (max-width: 1200px) {
+    .post {
+      transform: scale(0.9);
+      transform-origin: top left; } }
+  @media screen and (max-width: 950px) {
+    .post {
+      transform: scale(1);
+      transform-origin: top left; } }
+  .post:hover {
+    box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3); }
+    .post:hover .post-social-media {
+      box-shadow: 0 0 0 0 transparent;
+      transition: box-shadow .4s; }
+    .post:hover .post-share {
+      box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3);
+      transition: box-shadow .4s; }
+  .post .post-share {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: -50px;
+    bottom: -100px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    transition: box-shadow .4s; }
+    .post .post-share > img {
+      width: 50px;
+      height: 50px; }
+
+.post-social-media {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 2.62px 2.62px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow .3s; }
+  .post-social-media > div {
+    position: relative;
+    width: 100px;
+    height: 100px; }
+  .post-social-media .social-media-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    perspective: 1000px; }
+    .post-social-media .social-media-icon > div {
+      width: 50px;
+      height: 50px; }
+  .post-social-media .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative; }
+  .post-social-media .front,
+  .post-social-media .back {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden; }
+  .post-social-media .front {
+    z-index: 2;
+    transform: rotateY(0deg); }
+  .post-social-media .back {
+    transform: rotateY(180deg); }
+  .post-social-media .facebook {
+    top: 0;
+    left: 0; }
+  .post-social-media .twitter {
+    top: 0;
+    right: 0; }
+    .post-social-media .twitter .flipper {
+      transition-delay: .1s; }
+  .post-social-media .pinterest {
+    bottom: 0;
+    left: 0; }
+    .post-social-media .pinterest .flipper {
+      transition-delay: .2s; }
+  .post-social-media .reddit {
+    bottom: 0;
+    right: 0; }
+    .post-social-media .reddit .flipper {
+      transition-delay: .3s; }
+
+.post-thumbnail {
+  position: relative;
+  max-width: 400px;
+  max-height: 300px; }
+
+.post-title {
+  max-width: 300px;
+  padding: 20px 20px 0 20px; }
+
+.post-meta {
+  position: absolute;
+  bottom: 20px;
+  left: 0; }
+  .post-meta > div {
+    width: 400px;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between; }
+  .post-meta .date {
+    text-align: right; }
+
+/*--------------------------------------------------------------
+## Categories
+--------------------------------------------------------------*/
+.category-style .front {
+  background-color: #ff4338; }
+.category-style .post-share {
+  background-color: #fc9f9a; }
+.category-style .facebook {
+  background-color: #fe564b; }
+.category-style .twitter {
+  background-color: #fe685f; }
+.category-style .pinterest {
+  background-color: #fd7a73; }
+.category-style .reddit {
+  background-color: #fd8d86; }
+.category-style .back:hover {
+  background-color: #ff4338;
+  cursor: pointer; }
+.category-style .post-title {
+  transition: color 0.4s; }
+.category-style:hover .post-title {
+  color: #ff4338;
+  transition: color 0.4s; }
+
+.category-home .front {
+  background-color: #004e59; }
+.category-home .post-share {
+  background-color: #7fa5a9; }
+.category-home .facebook {
+  background-color: #195f69; }
+.category-home .twitter {
+  background-color: #337179; }
+.category-home .pinterest {
+  background-color: #4c8289; }
+.category-home .reddit {
+  background-color: #669499; }
+.category-home .back:hover {
+  background-color: #004e59;
+  cursor: pointer; }
+.category-home .post-title {
+  transition: color 0.4s; }
+.category-home:hover .post-title {
+  color: #004e59;
+  transition: color 0.4s; }
+
+.category-sport .front {
+  background-color: #7a9c49; }
+.category-sport .post-share {
+  background-color: #bacaa0; }
+.category-sport .facebook {
+  background-color: #87a55b; }
+.category-sport .twitter {
+  background-color: #94ae6c; }
+.category-sport .pinterest {
+  background-color: #a0b87d; }
+.category-sport .reddit {
+  background-color: #adc18f; }
+.category-sport .back:hover {
+  background-color: #7a9c49;
+  cursor: pointer; }
+.category-sport .post-title {
+  transition: color 0.4s; }
+.category-sport:hover .post-title {
+  color: #7a9c49;
+  transition: color 0.4s; }
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none; }
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */

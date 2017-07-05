@@ -1,0 +1,314 @@
+/*--------------------------------------------------------------
+## Site Branding
+--------------------------------------------------------------*/
+.site-branding {
+	background-color: $color__bg-site-branding;
+	height: 100px;
+	width: 100px;
+	padding: 0 5px;
+	position: relative;
+
+	h1 {
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+.post {
+	position: relative;
+	width: 400px;
+	height: 500px;
+	// box shadow transition
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+	transition: box-shadow .4s;
+	//
+
+	&:hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+	@media screen and (max-width: 1200px) {
+		transform: scale(0.9);
+		transform-origin: top left;
+	}
+
+	@media screen and (max-width: 950px) {
+		transform: scale(1);
+		transform-origin: top left;
+	}
+
+	&:hover {
+		// box shadow transition
+		box-shadow: 0px 9px 3px 0px rgba(0,0,0,0.3);
+		// 
+
+		.post-social-media {
+			// box shadow transition
+			box-shadow: 0 0 0 0 rgba(0,0,0,0);
+			transition: box-shadow .4s;
+			// 
+		}
+
+		.post-share {
+			box-shadow: 0px 9px 3px 0px rgba(0,0,0,0.3);
+			transition: box-shadow .4s;
+		}
+	}
+
+	.post-share {
+		display: none;
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: -50px;
+		bottom: -100px;
+		// box shadow transition
+		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+		transition: box-shadow .4s;
+		//
+
+		> img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+}
+
+.post-social-media {
+	position: absolute;
+	right: 0;
+	bottom: -50px;
+	width: 100px;
+	height: 100px;
+	// box shadow transition
+	box-shadow: 0px 2.62px 2.62px 0px rgba(0,0,0,0.3);
+	transition: box-shadow .3s;
+	//
+
+	> div {
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.social-media-icon {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		perspective: 1000px;
+
+		> div {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.flipper {
+		transition: 0.6s;
+		transform-style: preserve-3d;
+		position: relative;
+	}
+
+	.front,
+	.back {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		backface-visibility: hidden;
+	}
+
+	.front {
+		z-index: 2;
+		transform: rotateY(0deg);
+	}
+
+	.back {
+		transform: rotateY(180deg);
+	}
+
+	.facebook {
+		top: 0;
+		left: 0;
+	}
+
+	.twitter {
+		top: 0;
+		right: 0;
+
+		.flipper {
+			transition-delay: .1s;
+		}
+	}
+
+	.pinterest {
+		bottom: 0;
+		left: 0;
+
+		.flipper {
+			transition-delay: .2s;
+		}
+	}
+
+	.reddit {
+		bottom: 0;
+		right: 0;
+
+		.flipper {
+			transition-delay: .3s;
+		}
+	}
+}
+
+.post-thumbnail {
+	position: relative;
+	max-width: 400px;
+	max-height: 300px;
+}
+
+.post-title {
+	max-width: 300px;
+	padding: 20px 20px 0 20px;
+}
+
+.post-meta {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+
+	> div {
+		width: 400px;
+		padding: 0 20px 0 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.date {
+		text-align: right;
+	}
+}
+
+/*--------------------------------------------------------------
+## Categories
+--------------------------------------------------------------*/
+.category-style {
+	.front {
+		background-color: $color__cat-1-main;
+	}
+	.post-share {
+		background-color: $color__cat-1-sixth;
+	}
+
+	.facebook {
+		background-color: $color__cat-1-second;
+	}
+
+	.twitter {
+		background-color: $color__cat-1-third;
+	}
+
+	.pinterest {
+		background-color: $color__cat-1-fourth;
+	}
+
+	.reddit {
+		background-color: $color__cat-1-fifth;
+	}
+
+	.back:hover {
+		background-color: $color__cat-1-main;
+		cursor: pointer;
+	}
+
+	.post-title {
+		transition: color .4s
+	}
+
+	&:hover .post-title {
+		color: $color__cat-1-main;
+		transition: color .4s
+	}
+}
+
+.category-home {
+	.front {
+		background-color: $color__cat-2-main;
+	}
+	.post-share {
+		background-color: $color__cat-2-sixth;
+	}
+
+	.facebook {
+		background-color: $color__cat-2-second;
+	}
+
+	.twitter {
+		background-color: $color__cat-2-third;
+	}
+
+	.pinterest {
+		background-color: $color__cat-2-fourth;
+	}
+
+	.reddit {
+		background-color: $color__cat-2-fifth;
+	}
+
+	.back:hover {
+		background-color: $color__cat-2-main;
+		cursor: pointer;
+	}
+
+	.post-title {
+		transition: color .4s
+	}
+
+	&:hover .post-title {
+		color: $color__cat-2-main;
+		transition: color .4s
+	}
+}
+
+.category-sport {
+	.front {
+		background-color: $color__cat-3-main;
+	}
+	.post-share {
+		background-color: $color__cat-3-sixth;
+	}
+
+	.facebook {
+		background-color: $color__cat-3-second;
+	}
+
+	.twitter {
+		background-color: $color__cat-3-third;
+	}
+
+	.pinterest {
+		background-color: $color__cat-3-fourth;
+	}
+
+	.reddit {
+		background-color: $color__cat-3-fifth;
+	}
+
+	.back:hover {
+		background-color: $color__cat-3-main;
+		cursor: pointer;
+	}
+
+	.post-title {
+		transition: color .4s
+	}
+
+	&:hover .post-title {
+		color: $color__cat-3-main;
+		transition: color .4s
+	}
+}
+

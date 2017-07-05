@@ -1,0 +1,59 @@
+.main-navigation {
+	margin-top: 1px;
+
+	ul {
+		margin: 0 0 0 0;
+		padding: 0;
+
+		li {
+			display: block;
+			height: 70px;
+			width: 100px;
+			position: relative;
+			padding: 0 10px;
+			// box shadow transition
+			box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+			transition: box-shadow .3s;
+			// 
+			cursor: pointer;
+
+			&:hover {
+				// box shadow transition
+				box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+				transition: box-shadow .3s;
+				// 
+			}
+
+			p {
+				position: absolute;
+				bottom: 0;
+			}
+		}
+	}
+
+	// cascading z-index ensures box shadow shows for each category button
+	.nav-cat-1 {
+		background: $color__cat-1-main;
+		z-index: 6;
+	}
+
+	.nav-cat-2 {
+		background: $color__cat-2-main;
+		z-index: 5;
+	}
+
+	.nav-cat-3 {
+		background: $color__cat-3-main;
+		z-index: 4;
+	}
+
+	.nav-cat-4 {
+		background: $color__cat-4-main;
+		z-index: 3;
+	}
+
+	.nav-cat-5 {
+		background: $color__cat-5-main;
+		z-index: 2;
+	}
+}

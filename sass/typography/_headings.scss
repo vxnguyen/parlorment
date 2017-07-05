@@ -1,0 +1,19 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0;
+}
+
+.site-branding h1 {
+	@include font-size(1.614375);
+	line-height: 1;
+	color: $color__font-navigation;
+}
+
+.post-title {
+	@include font-size(1.5625);
+	line-height: 1.2;
+
+	@media screen and (max-width: 1200px) {
+		@include font-size(1.4);
+	}
+}
