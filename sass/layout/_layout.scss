@@ -1,76 +1,32 @@
 /*--------------------------------------------------------------
 ## Layout
 --------------------------------------------------------------*/
+.site-header {
+	position: fixed;
+	top: 100px;
+	right: 0;
+}
+
 .site {
-	max-width: 1200px;
+	max-width: 100%;
 	margin: 0 auto;
-	padding-top: 100px;
+	padding: {
+		top: 100px;
+		right: 100px;
+	}
 }
 
 .site-main {
 	display: flex;
 	flex-wrap: wrap;
-	width: 1000px;
-
-	@media screen and (max-width: 1200px) {
-		width: 950px;
-	}
-
-	@media screen and (max-width: 1150px) {
-			width: 900px;
-
-		}
-
-	@media screen and (max-width: 1050px) {
-		width: 800px;
-	}
-
-	@media screen and (max-width: 950px) {
-		width: 700px;
+	justify-content: space-around;
+	padding: {
+		right: 50px;
+		left: 50px;
 	}
 
 	.post {
-		margin-right: 100px;
 		margin-bottom: 100px;
 		transition: all .3s;
-
-		@media screen and (max-width: 1200px) {
-			margin-bottom: 50px;
-			margin-right: 50px;
-			transition: all .3s;
-		}
-
-		@media screen and (max-width: 1150px) {
-			margin-right: 50px
-
-		}
-
-		@media screen and (max-width: 1050px) {
-			margin-right: 0;
-			transition: all .3s;
-		}
-
-		@media screen and (max-width: 950px) {
-			margin-right: auto;
-			margin-left: auto;
-			margin-bottom: 100px;
-		}
 	}
-}
-
-.site-content {
-	max-width: 1050px;
-	padding-left: 100px;
-	float: left;
-	transition: all .3s;
-
-	@media screen and (max-width: 1100px) {
-		padding-left: 50px;
-		transition: all .3s;
-	}
-}
-
-.site-header {
-	float: right;
-	max-width: 100px;
 }

@@ -38,7 +38,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @font-face {
   font-family: "MaisonNeueBold";
-  src: url("/fonts/maison-neue-bold.ttf"); }
+  src: url("/fonts/maison-neue-bold.ttf");
+  font-weight: bold; }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -459,62 +460,26 @@ a {
 /*--------------------------------------------------------------
 ## Layout
 --------------------------------------------------------------*/
+.site-header {
+  position: fixed;
+  top: 100px;
+  right: 0; }
+
 .site {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding-top: 100px; }
+  padding-top: 100px;
+  padding-right: 100px; }
 
 .site-main {
   display: flex;
   flex-wrap: wrap;
-  width: 1000px; }
-  @media screen and (max-width: 1200px) {
-    .site-main {
-      width: 950px; } }
-  @media screen and (max-width: 1150px) {
-    .site-main {
-      width: 900px; } }
-  @media screen and (max-width: 1050px) {
-    .site-main {
-      width: 800px; } }
-  @media screen and (max-width: 950px) {
-    .site-main {
-      width: 700px; } }
+  justify-content: space-around;
+  padding-right: 50px;
+  padding-left: 50px; }
   .site-main .post {
-    margin-right: 100px;
     margin-bottom: 100px;
     transition: all .3s; }
-    @media screen and (max-width: 1200px) {
-      .site-main .post {
-        margin-bottom: 50px;
-        margin-right: 50px;
-        transition: all .3s; } }
-    @media screen and (max-width: 1150px) {
-      .site-main .post {
-        margin-right: 50px; } }
-    @media screen and (max-width: 1050px) {
-      .site-main .post {
-        margin-right: 0;
-        transition: all .3s; } }
-    @media screen and (max-width: 950px) {
-      .site-main .post {
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 100px; } }
-
-.site-content {
-  max-width: 1050px;
-  padding-left: 100px;
-  float: left;
-  transition: all .3s; }
-  @media screen and (max-width: 1100px) {
-    .site-content {
-      padding-left: 50px;
-      transition: all .3s; } }
-
-.site-header {
-  float: right;
-  max-width: 100px; }
 
 /*--------------------------------------------------------------
 # Content
@@ -546,11 +511,7 @@ a {
   @media screen and (max-width: 1200px) {
     .post {
       transform: scale(0.9);
-      transform-origin: top left; } }
-  @media screen and (max-width: 950px) {
-    .post {
-      transform: scale(1);
-      transform-origin: top left; } }
+      transform-origin: 50% 0%; } }
   .post:hover {
     box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3); }
     .post:hover .post-social-media {
