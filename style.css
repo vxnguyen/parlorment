@@ -474,12 +474,83 @@ a {
 .site-main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding-right: 50px;
   padding-left: 50px; }
   .site-main .post {
     margin-bottom: 100px;
-    transition: all .3s; }
+    transition: all .3s;
+    margin-left: 6%;
+    margin-right: 6%; }
+    @media screen and (max-width: 1252px) {
+      .site-main .post {
+        margin-left: 5%;
+        margin-right: 5%; } }
+    @media screen and (max-width: 1200px) {
+      .site-main .post {
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 50px;
+        transform: scale(0.9);
+        transform-origin: 50% 0%; } }
+    @media screen and (max-width: 1152px) {
+      .site-main .post {
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-bottom: 40px; } }
+    @media screen and (max-width: 1109px) {
+      .site-main .post {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 30px; } }
+    @media screen and (max-width: 1069px) {
+      .site-main .post {
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 1033px) {
+      .site-main .post {
+        margin-left: .5%;
+        margin-right: .5%;
+        margin-bottom: -20px;
+        transform: scale(0.8);
+        transform-origin: 50% 0%; } }
+    @media screen and (max-width: 1016px) {
+      .site-main .post {
+        margin-left: .1%;
+        margin-right: .1%;
+        margin-bottom: -20px; } }
+    @media screen and (max-width: 1003px) {
+      .site-main .post {
+        margin-left: -.5%;
+        margin-right: -.5%;
+        margin-bottom: -20px; } }
+    @media screen and (max-width: 984px) {
+      .site-main .post {
+        margin-left: -1%;
+        margin-right: -1%;
+        margin-bottom: -20px; } }
+    @media screen and (max-width: 969px) {
+      .site-main .post {
+        margin-left: -2%;
+        margin-right: -2%;
+        margin-bottom: -40px; } }
+    @media screen and (max-width: 940px) {
+      .site-main .post {
+        margin-left: -3%;
+        margin-right: -3%;
+        margin-bottom: -60px; } }
+    @media screen and (max-width: 914px) {
+      .site-main .post {
+        margin-left: -4%;
+        margin-right: -4%;
+        margin-bottom: -70px; } }
+    @media screen and (max-width: 899px) {
+      .site-main .post {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        transform: scale(1);
+        transform-origin: 50% 0%; } }
 
 /*--------------------------------------------------------------
 # Content
@@ -502,7 +573,6 @@ a {
 --------------------------------------------------------------*/
 .post {
   position: relative;
-  width: 400px;
   height: 500px;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
   transition: box-shadow .4s; }
