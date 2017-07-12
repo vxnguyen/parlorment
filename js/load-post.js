@@ -9,10 +9,10 @@
 		event.preventDefault();
 		$modal.load(post);
 
-		$modalContainer.delay("500").slideDown(1500);
+		$modalContainer.delay("500").fadeIn(1500);
 	});
 
 	$modalController.click(function() {
-		$modalContainer.slideUp(900);
+		$modalContainer.fadeOut(900);
 	});
 ;})(jQuery);
