@@ -103,4 +103,17 @@
 			}
 		}
 	}( container ) );
+
+	 $(document).ready(function(){
+ 
+        $.ajaxSetup({cache:false});
+        $(".post-link").click(function(){
+            var post_link = $(this).attr("href");
+ 
+            $("#single-post-container").html("content loading");
+            $("#single-post-container").load(post_link);
+        return false;
+        });
+ 
+    });
 } )();
