@@ -264,6 +264,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5625rem;
   line-height: 1.2; }
 
+.modal-title {
+  font-size: 60px;
+  font-size: 3.75rem; }
+
 p {
   margin: 0; }
 
@@ -768,7 +772,12 @@ a {
     width: 50px;
     height: 50px;
     background-color: #000000;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: box-shadow .3s; }
+    .modal-container .modal-controller:hover {
+      box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3);
+      transition: box-shadow .3s; }
   .modal-container #modal-window {
     box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
     margin-right: 150px;
@@ -788,6 +797,9 @@ a {
     padding-right: 50px; }
   .modal-container .post {
     box-shadow: none; }
+  .modal-container .modal-title {
+    margin-left: 50px;
+    padding-right: 200px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

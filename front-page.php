@@ -12,6 +12,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div class="modal-container">
 				<div class="modal-controller">
+					<img id="modal-close" src="<?php bloginfo('stylesheet_directory'); ?>/images/close-modal.png">
 				</div>
 				<div id="modal-window">
 				</div>
