@@ -8,7 +8,7 @@
 		var $modal = $("#modal-window");
 
 		event.preventDefault();
-		$modal.load(post);
+		$modal.load(post + " #primary");
 
 		$modalContainer.delay("500").fadeIn(300);
 	});
