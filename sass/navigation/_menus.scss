@@ -7,21 +7,17 @@
 
 		li {
 			display: block;
+			position: relative;
 			height: 70px;
 			width: 100px;
-			position: relative;
 			padding: 0 10px;
-			// box shadow transition
 			box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 			transition: box-shadow .3s;
-			// 
 			cursor: pointer;
 
 			&:hover {
-				// box shadow transition
 				box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
 				transition: box-shadow .3s;
-				// 
 			}
 
 			p {

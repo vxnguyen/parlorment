@@ -29,8 +29,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Links
 	## Menus
 # Accessibility
-# Layout
 # Content
+	## Site General
 	## Site Branding
 	## Posts
 	## Categories
@@ -38,8 +38,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @font-face {
   font-family: "MaisonNeueBold";
-  src: url("/fonts/maison-neue-bold.ttf");
+  src: url("fonts/maison-neue-bold.ttf");
   font-weight: bold; }
+@font-face {
+  font-family: "MaisonNeueMedium";
+  src: url("fonts/maison-neue-medium.ttf"); }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -230,16 +233,15 @@ textarea {
   line-height: 1.5; }
 
 .main-navigation {
-  font-family: "MaisonNeueBold", sans-serif;
+  font-family: "MaisonNeueMedium", sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
   color: #FFFFFF; }
 
 .post-meta {
-  font-family: "MaisonNeueBold", sans-serif;
+  font-family: "MaisonNeueMedium", sans-serif;
   font-size: 15px;
   font-size: 0.9375rem;
-  font-weight: 500;
   color: #C1C1C1;
   line-height: 1.3; }
   @media screen and (max-width: 1200px) {
@@ -252,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 .site-branding h1 {
-  font-family: "MaisonNeueBold", sans-serif;
+  font-family: "MaisonNeueMedium", sans-serif;
   font-size: 25.83px;
   font-size: 1.61438rem;
   line-height: 1;
@@ -395,9 +397,9 @@ a {
     padding: 0; }
     .main-navigation ul li {
       display: block;
+      position: relative;
       height: 70px;
       width: 100px;
-      position: relative;
       padding: 0 10px;
       box-shadow: 0px 0px 0px 0px transparent;
       transition: box-shadow .3s;
@@ -459,21 +461,155 @@ a {
   outline: 0; }
 
 /*--------------------------------------------------------------
-# Layout
+# Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## Layout
+## Site General
+--------------------------------------------------------------*/
+.site {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-right: 100px; }
+
+.opacity-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 10; }
+
+/*--------------------------------------------------------------
+## Site Branding
 --------------------------------------------------------------*/
 .site-header {
   position: fixed;
   top: 100px;
   right: 0; }
 
-.site {
-  max-width: 100%;
-  margin: 0 auto;
-  padding-top: 100px;
-  padding-right: 100px; }
+.site-branding {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  padding: 0 5px;
+  background-color: #000000; }
+  .site-branding h1 {
+    position: absolute;
+    bottom: 0; }
+
+/*--------------------------------------------------------------
+## Posts
+--------------------------------------------------------------*/
+.post {
+  position: relative;
+  height: 500px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow .4s; }
+  .post:hover .flipper {
+    transform: rotateY(180deg); }
+  @media screen and (max-width: 1200px) {
+    .post {
+      transform: scale(0.9);
+      transform-origin: 50% 0%; } }
+  .post:hover {
+    box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3); }
+    .post:hover .post-social-media {
+      box-shadow: 0 0 0 0 transparent;
+      transition: box-shadow .4s; }
+    .post:hover .post-share {
+      box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3);
+      transition: box-shadow .4s; }
+  .post .post-share {
+    display: none;
+    position: absolute;
+    right: -50px;
+    bottom: -100px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    transition: box-shadow .4s; }
+    .post .post-share > img {
+      width: 50px;
+      height: 50px; }
+
+.post-social-media {
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 2.62px 2.62px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow .3s; }
+  .post-social-media > div {
+    position: relative;
+    width: 100px;
+    height: 100px; }
+  .post-social-media .social-media-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px; }
+  .post-social-media .flipper {
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d; }
+  .post-social-media .front,
+  .post-social-media .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    backface-visibility: hidden; }
+  .post-social-media .front {
+    z-index: 2;
+    transform: rotateY(0deg); }
+  .post-social-media .back {
+    transform: rotateY(180deg); }
+  .post-social-media .facebook {
+    top: 0;
+    left: 0; }
+  .post-social-media .twitter {
+    top: 0;
+    right: 0; }
+    .post-social-media .twitter .flipper {
+      transition-delay: .1s; }
+  .post-social-media .pinterest {
+    bottom: 0;
+    left: 0; }
+    .post-social-media .pinterest .flipper {
+      transition-delay: .2s; }
+  .post-social-media .reddit {
+    bottom: 0;
+    right: 0; }
+    .post-social-media .reddit .flipper {
+      transition-delay: .3s; }
+
+.post-thumbnail {
+  position: relative;
+  max-width: 400px;
+  max-height: 300px; }
+
+.post-title {
+  max-width: 300px;
+  padding: 20px 20px 0 20px; }
+  .post-title a {
+    text-decoration: none;
+    color: #222222; }
+
+.post-meta {
+  position: absolute;
+  bottom: 20px;
+  left: 0; }
+  .post-meta > div {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    padding: 0 20px 0 20px; }
+  .post-meta .date {
+    text-align: right; }
 
 .posts-container {
   display: flex;
@@ -482,9 +618,9 @@ a {
   padding-left: 50px; }
   .posts-container .post {
     margin-bottom: 100px;
-    transition: all .3s;
     margin-left: 6%;
-    margin-right: 6%; }
+    margin-right: 6%;
+    transition: all .3s; }
     @media screen and (max-width: 1252px) {
       .posts-container .post {
         margin-left: 5%;
@@ -557,139 +693,15 @@ a {
         transform-origin: 50% 0%; } }
 
 /*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-## Site Branding
---------------------------------------------------------------*/
-.site-branding {
-  background-color: #000000;
-  height: 100px;
-  width: 100px;
-  padding: 0 5px;
-  position: relative; }
-  .site-branding h1 {
-    position: absolute;
-    bottom: 0; }
-
-/*--------------------------------------------------------------
-## Posts
---------------------------------------------------------------*/
-.post {
-  position: relative;
-  height: 500px;
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
-  transition: box-shadow .4s; }
-  .post:hover .flipper {
-    transform: rotateY(180deg); }
-  @media screen and (max-width: 1200px) {
-    .post {
-      transform: scale(0.9);
-      transform-origin: 50% 0%; } }
-  .post:hover {
-    box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3); }
-    .post:hover .post-social-media {
-      box-shadow: 0 0 0 0 transparent;
-      transition: box-shadow .4s; }
-    .post:hover .post-share {
-      box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3);
-      transition: box-shadow .4s; }
-  .post .post-share {
-    display: none;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: -50px;
-    bottom: -100px;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
-    transition: box-shadow .4s; }
-    .post .post-share > img {
-      width: 50px;
-      height: 50px; }
-
-.post-social-media {
-  position: absolute;
-  right: 0;
-  bottom: -50px;
-  width: 100px;
-  height: 100px;
-  box-shadow: 0px 2.62px 2.62px 0px rgba(0, 0, 0, 0.3);
-  transition: box-shadow .3s; }
-  .post-social-media > div {
-    position: relative;
-    width: 100px;
-    height: 100px; }
-  .post-social-media .social-media-icon {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    perspective: 1000px; }
-    .post-social-media .social-media-icon > div {
-      width: 50px;
-      height: 50px; }
-  .post-social-media .flipper {
-    transition: 0.6s;
-    transform-style: preserve-3d;
-    position: relative; }
-  .post-social-media .front,
-  .post-social-media .back {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden; }
-  .post-social-media .front {
-    z-index: 2;
-    transform: rotateY(0deg); }
-  .post-social-media .back {
-    transform: rotateY(180deg); }
-  .post-social-media .facebook {
-    top: 0;
-    left: 0; }
-  .post-social-media .twitter {
-    top: 0;
-    right: 0; }
-    .post-social-media .twitter .flipper {
-      transition-delay: .1s; }
-  .post-social-media .pinterest {
-    bottom: 0;
-    left: 0; }
-    .post-social-media .pinterest .flipper {
-      transition-delay: .2s; }
-  .post-social-media .reddit {
-    bottom: 0;
-    right: 0; }
-    .post-social-media .reddit .flipper {
-      transition-delay: .3s; }
-
-.post-thumbnail {
-  position: relative;
-  max-width: 400px;
-  max-height: 300px; }
-
-.post-title {
-  max-width: 300px;
-  padding: 20px 20px 0 20px; }
-  .post-title a {
-    text-decoration: none;
-    color: #222222; }
-
-.post-meta {
-  position: absolute;
-  bottom: 20px;
-  left: 0; }
-  .post-meta > div {
-    width: 400px;
-    padding: 0 20px 0 20px;
-    display: flex;
-    justify-content: space-between; }
-  .post-meta .date {
-    text-align: right; }
-
-/*--------------------------------------------------------------
 ## Categories
 --------------------------------------------------------------*/
+.post .post-title a {
+  transition: color .4s; }
+.post:hover .post-title a {
+  transition: color .4s; }
+.post .back {
+  cursor: pointer; }
+
 .category-style .front {
   background-color: #ff4338; }
 .category-style .post-share {
@@ -703,13 +715,9 @@ a {
 .category-style .reddit {
   background-color: #fd8d86; }
 .category-style .back:hover {
-  background-color: #ff4338;
-  cursor: pointer; }
-.category-style .post-title a {
-  transition: color 0.4s; }
+  background-color: #ff4338; }
 .category-style:hover .post-title a {
-  color: #ff4338;
-  transition: color 0.4s; }
+  color: #ff4338; }
 
 .category-home .front {
   background-color: #004e59; }
@@ -724,13 +732,9 @@ a {
 .category-home .reddit {
   background-color: #669499; }
 .category-home .back:hover {
-  background-color: #004e59;
-  cursor: pointer; }
-.category-home .post-title a {
-  transition: color 0.4s; }
+  background-color: #004e59; }
 .category-home:hover .post-title a {
-  color: #004e59;
-  transition: color 0.4s; }
+  color: #004e59; }
 
 .category-sport .front {
   background-color: #7a9c49; }
@@ -745,26 +749,23 @@ a {
 .category-sport .reddit {
   background-color: #adc18f; }
 .category-sport .back:hover {
-  background-color: #7a9c49;
-  cursor: pointer; }
-.category-sport .post-title a {
-  transition: color .4s; }
+  background-color: #7a9c49; }
 .category-sport:hover .post-title a {
-  color: #7a9c49;
-  transition: color 0.4s; }
+  color: #7a9c49; }
 
 /*--------------------------------------------------------------
 ## Modal
 --------------------------------------------------------------*/
 .modal-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   height: 1000px;
-  display: none;
-  z-index: 20; }
+  z-index: 20;
+  overflow-y: scroll; }
   .modal-container .modal-controller {
     position: absolute;
     top: 100px;
@@ -779,19 +780,16 @@ a {
       box-shadow: 0px 9px 3px 0px rgba(0, 0, 0, 0.3);
       transition: box-shadow .3s; }
   .modal-container #modal-window {
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
-    margin-right: 150px;
-    z-index: 10;
-    background-color: #ffffff;
     position: absolute;
     top: 100px;
     left: 100px;
     right: 0;
-    max-width: 100%; }
-  .modal-container .site {
-    padding-top: 0;
-    padding-right: 0; }
-  .modal-container .site-content {
+    max-width: 100%;
+    margin-right: 150px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    z-index: 10; }
+  .modal-container .content-area {
     padding-top: 100px;
     padding-left: 50px;
     padding-right: 50px; }
@@ -799,7 +797,8 @@ a {
     box-shadow: none; }
   .modal-container .modal-title {
     margin-left: 50px;
-    padding-right: 200px; }
+    padding-right: 200px;
+    margin-bottom: 1000px; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
