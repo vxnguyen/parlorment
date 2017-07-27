@@ -5,10 +5,11 @@
 	left: 0;
 	right: 0;
 	width: 100%;
-	height: 1000px;
+	height: 100%;
 	z-index: 20;
 	overflow-y: scroll;
 
+	// x button to close modal window
 	.modal-controller {
 		position: absolute;
 		top: 100px;
@@ -26,6 +27,7 @@
 		}
 	}
 
+	//modal window
 	#modal-window {
 		position: absolute;
 		top: 100px;
@@ -38,7 +40,63 @@
 		z-index: 10;
 	}
 
-	.content-area {
+	// container for post meta and languge content
+	.modal-meta-content {
+		display: flex;
+		margin-top: 50px;
+	}
+
+	// override post styles for front page
+	.post {
+		box-shadow: none;
+		height: 100%;
+
+		// remove post scaling from front page styles
+		@media screen and (max-width: 1200px) {
+			transform: scale(1);
+		}
+
+		@media screen and (max-width: 1033px) {
+			transform: scale(1);
+		}
+
+		@media screen and (max-width: 899px) {
+			transform: scale(1);
+		}
+	}
+
+	// override post meta styles for fron page
+	.post-meta {
+		position: initial;
+		margin-left: 50px;
+		width: 250px;
+
+		> div {
+			padding: 0;
+		}
+
+		.date,
+		.author {
+			text-align: left;
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+
+	.modal-title {
+		margin-left: 50px;
+		padding-right: 200px;
+	}
+
+	.modal-sidebar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50px;
+		height: 100%;
+	}
+
+	.modal-content {
 		padding: {
 			top: 100px;
 			left: 50px;
@@ -46,13 +104,7 @@
 		}
 	}
 
-	.post {
-		box-shadow: none;
-	}
-
-	.modal-title {
-		margin-left: 50px;
-		padding-right: 200px;
-		margin-bottom: 1000px;
+	.modal-post-content {
+		padding-right: 100px;
 	}
 }

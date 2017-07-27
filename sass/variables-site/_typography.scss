@@ -9,10 +9,16 @@
     src: url("fonts/maison-neue-medium.ttf");
 }
 
+@font-face {
+    font-family: "MaisonNeueMono";
+    src: url("fonts/maison-neue-mono.ttf");
+}
+
 $font__main: "MaisonNeueMedium", sans-serif;
 $font__navigation: "MaisonNeueMedium", sans-serif;
 $font__post-title: "MaisonNeueBold", sans-serif;
 $font__post-meta: "MaisonNeueMedium", sans-serif;
+$font__modal-post-content: "MaisonNeueMono", sans-serif;
 $font__site-branding: "MaisonNeueMedium", sans-serif;
 
 

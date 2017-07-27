@@ -44,6 +44,10 @@
 	&:hover .post-title a {
 		color: $color__cat-1-main;
 	}
+
+	.modal-sidebar {
+		background-color: $color__cat-1-main;
+	}
 }
 
 .category-home {
@@ -77,6 +81,10 @@
 	&:hover .post-title a {
 		color: $color__cat-2-main;
 	}
+
+	.modal-sidebar {
+		background-color: $color__cat-2-main;
+	}
 }
 
 .category-sport {
@@ -109,5 +117,9 @@
 
 	&:hover .post-title a {
 		color: $color__cat-3-main;
+	}
+
+	.modal-sidebar {
+		background-color: $color__cat-3-main;
 	}
 }

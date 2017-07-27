@@ -26,6 +26,16 @@ textarea {
 	}
 }
 
+.modal-container .post-meta {
+	@include font-size(1.25);
+}
+
+.modal-post-content p {
+	font-family: $font__modal-post-content;
+	@include font-size(0.8125);
+	line-height: 2.2;
+}
+
 @import "headings";
 
 @import "copy";

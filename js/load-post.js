@@ -12,9 +12,9 @@
 		event.preventDefault();
 		$modal.load(post + " #posts-primary");
 
-		$modalContainer.delay("500").fadeIn(300);
+		$modalContainer.fadeIn(300);
 
-		$opacityBg.delay("500").fadeIn(300);
+		$opacityBg.fadeIn(300);
 
 		$body.css("overflow", "hidden");
 	});
