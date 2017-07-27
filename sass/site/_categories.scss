@@ -1,0 +1,113 @@
+.post {
+	.post-title a {
+		transition: color .4s;
+	}
+
+	&:hover .post-title a {
+		transition: color .4s;
+	}
+
+	.back {
+		cursor: pointer;
+	}
+}
+
+.category-style {
+	.front {
+		background-color: $color__cat-1-main;
+	}
+
+	.post-share {
+		background-color: $color__cat-1-sixth;
+	}
+
+	.facebook {
+		background-color: $color__cat-1-second;
+	}
+
+	.twitter {
+		background-color: $color__cat-1-third;
+	}
+
+	.pinterest {
+		background-color: $color__cat-1-fourth;
+	}
+
+	.reddit {
+		background-color: $color__cat-1-fifth;
+	}
+
+	.back:hover {
+		background-color: $color__cat-1-main;
+	}
+
+	&:hover .post-title a {
+		color: $color__cat-1-main;
+	}
+}
+
+.category-home {
+	.front {
+		background-color: $color__cat-2-main;
+	}
+	.post-share {
+		background-color: $color__cat-2-sixth;
+	}
+
+	.facebook {
+		background-color: $color__cat-2-second;
+	}
+
+	.twitter {
+		background-color: $color__cat-2-third;
+	}
+
+	.pinterest {
+		background-color: $color__cat-2-fourth;
+	}
+
+	.reddit {
+		background-color: $color__cat-2-fifth;
+	}
+
+	.back:hover {
+		background-color: $color__cat-2-main;
+	}
+
+	&:hover .post-title a {
+		color: $color__cat-2-main;
+	}
+}
+
+.category-sport {
+	.front {
+		background-color: $color__cat-3-main;
+	}
+	.post-share {
+		background-color: $color__cat-3-sixth;
+	}
+
+	.facebook {
+		background-color: $color__cat-3-second;
+	}
+
+	.twitter {
+		background-color: $color__cat-3-third;
+	}
+
+	.pinterest {
+		background-color: $color__cat-3-fourth;
+	}
+
+	.reddit {
+		background-color: $color__cat-3-fifth;
+	}
+
+	.back:hover {
+		background-color: $color__cat-3-main;
+	}
+
+	&:hover .post-title a {
+		color: $color__cat-3-main;
+	}
+}

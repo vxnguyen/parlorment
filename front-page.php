@@ -16,6 +16,7 @@ get_header(); ?>
 					<img id="modal-close" src="<?php bloginfo('stylesheet_directory'); ?>/images/close-modal.png">
 				</div>
 				<div id="modal-window">
+					<!-- loading screen content -->
 				</div>
 			</div>
 		<main id="main" class="site-main" role="main">

@@ -1,0 +1,22 @@
+// main navigation menu styles in navigation/menus.scss
+
+// menu bar container
+.site-header {
+	position: fixed;
+	top: 100px;
+	right: 0;
+}
+
+// logotype within menu bar
+.site-branding {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	padding: 0 5px;
+	background-color: $color__bg-site-branding;
+
+	h1 {
+		position: absolute;
+		bottom: 0;
+	}
+}

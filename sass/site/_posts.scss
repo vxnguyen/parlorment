@@ -1,0 +1,291 @@
+// post card styles
+.post {
+	position: relative;
+	height: 500px;
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+	transition: box-shadow .4s;
+
+	&:hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+	@media screen and (max-width: 1200px) {
+		transform: scale(0.9);
+		transform-origin: 50% 0%;
+	}
+
+	&:hover {
+		box-shadow: 0px 9px 3px 0px rgba(0,0,0,0.3);
+
+		.post-social-media {
+			box-shadow: 0 0 0 0 rgba(0,0,0,0);
+			transition: box-shadow .4s;
+		}
+
+		.post-share {
+			box-shadow: 0px 9px 3px 0px rgba(0,0,0,0.3);
+			transition: box-shadow .4s;
+		}
+	}
+
+	// no hover fallback button to open social media share panel for mobile and tablet devices
+	.post-share {
+		display: none;
+		position: absolute;
+		right: -50px;
+		bottom: -100px;
+		width: 50px;
+		height: 50px;
+		box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.3);
+		transition: box-shadow .4s;
+
+		> img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////////
+}
+
+// post card social media buttons
+.post-social-media {
+	position: absolute;
+	right: 0;
+	bottom: -50px;
+	width: 100px;
+	height: 100px;
+	box-shadow: 0px 2.62px 2.62px 0px rgba(0,0,0,0.3);
+	transition: box-shadow .3s;
+
+	> div {
+		position: relative;
+		width: 100px;
+		height: 100px;
+	}
+
+	.social-media-icon {
+		position: absolute;
+		width: 50px;
+		height: 50px;
+	}
+
+	.flipper {
+		position: relative;
+		transition: 0.6s;
+		transform-style: preserve-3d;
+	}
+
+	.front,
+	.back {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+		height: 50px;
+		backface-visibility: hidden;
+	}
+
+	.front {
+		z-index: 2;
+		transform: rotateY(0deg);
+	}
+
+	.back {
+		transform: rotateY(180deg);
+	}
+
+	.facebook {
+		top: 0;
+		left: 0;
+	}
+
+	.twitter {
+		top: 0;
+		right: 0;
+
+		.flipper {
+			// cascading flip animation delay
+			transition-delay: .1s;
+		}
+	}
+
+	.pinterest {
+		bottom: 0;
+		left: 0;
+
+		.flipper {
+			// cascading flip animation delay
+			transition-delay: .2s;
+		}
+	}
+
+	.reddit {
+		bottom: 0;
+		right: 0;
+
+		.flipper {
+			// cascading flip animation delay
+			transition-delay: .3s;
+		}
+	}
+}
+
+.post-thumbnail {
+	position: relative;
+	max-width: 400px;
+	max-height: 300px;
+}
+
+.post-title {
+	max-width: 300px;
+	padding: 20px 20px 0 20px;
+
+	a {
+		text-decoration: none;
+		color: #222222;
+	}
+}
+
+.post-meta {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+
+	> div {
+		display: flex;
+		justify-content: space-between;
+		width: 400px;
+		padding: 0 20px 0 20px;
+	}
+
+	.date {
+		text-align: right;
+	}
+}
+
+.posts-container {
+	display: flex;
+	flex-wrap: wrap;
+	padding: {
+		right: 50px;
+		left: 50px;
+	}
+
+	.post {
+		margin: {
+			bottom: 100px;
+			left: 6%;
+			right: 6%;
+		}
+		transition: all .3s;
+
+		@media screen and (max-width: 1252px) {
+			margin: {
+				left: 5%;
+				right: 5%;
+			}
+		}
+
+		@media screen and (max-width: 1200px) {
+			margin: {
+				left: 4%;
+				right: 4%;
+				bottom: 50px;
+			}
+			transform: scale(0.9);
+			transform-origin: 50% 0%;
+		}
+
+		@media screen and (max-width: 1152px) {
+			margin: {
+				left: 3%;
+				right: 3%;
+				bottom: 40px;
+			}
+		}
+
+		@media screen and (max-width: 1109px) {
+			margin: {
+				left: 2%;
+				right: 2%;
+				bottom: 30px;
+			}
+		}
+
+		@media screen and (max-width: 1069px) {
+			margin: {
+				left: 1%;
+				right: 1%;
+				bottom: 20px
+			}
+		}
+
+		@media screen and (max-width: 1033px) {
+			margin: {
+				left: .5%;
+				right: .5%;
+				bottom: -20px;
+			}
+			transform: scale(0.8);
+			transform-origin: 50% 0%;
+		}
+
+		@media screen and (max-width: 1016px) {
+			margin: {
+				left: .1%;
+				right: .1%;
+				bottom: -20px;
+			}
+		}
+
+		@media screen and (max-width: 1003px) {
+			margin: {
+				left: -.5%;
+				right: -.5%;
+				bottom: -20px;
+			}
+		}
+
+		@media screen and (max-width: 984px) {
+			margin: {
+				left: -1%;
+				right: -1%;
+				bottom: -20px;
+			}
+		}
+
+		@media screen and (max-width: 969px) {
+			margin: {
+				left: -2%;
+				right: -2%;
+				bottom: -40px;
+			}
+		}
+
+		@media screen and (max-width: 940px) {
+			margin: {
+				left: -3%;
+				right: -3%;
+				bottom: -60px;
+			}
+		}
+
+		@media screen and (max-width: 914px) {
+			margin: {
+				left: -4%;
+				right: -4%;
+				bottom: -70px;
+			}
+		}
+
+		@media screen and (max-width: 899px) {
+			margin: {
+				left: auto;
+				right: auto;
+				bottom: 100px;
+			}
+			transform: scale(1);
+			transform-origin: 50% 0%;
+		}
+	}
+}
